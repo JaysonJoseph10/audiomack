@@ -1,0 +1,29 @@
+.cookies-container {
+  display: flex;
+  height: 50px;
+  max-height: 50px;
+  background-color: #161616;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-family: $sansSerif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: .008rem;
+    position: relative;
+    left: -8px;
+
+    a {
+      text-decoration: none;
+      color: #ffa200;
+      transition: .15s;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
