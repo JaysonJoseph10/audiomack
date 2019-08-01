@@ -1,14 +1,19 @@
 header {
-  max-height: 62px;
+  max-height: 60px;
   display: flex;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 50px;
+  z-index: 1;
+  background: white;
 
   .menu-btn {
     display: inline-block;
     background: $mainOrange;
     padding: 24px;
-    max-width: 62px;
-    max-height: 62px;
+    max-width: 60px;
+    max-height: 60px;
     color: white;
 
 
@@ -27,18 +32,41 @@ header {
       width: 124px;
       margin-left: 16px;
     }
-    input {
-      font-family: $sansSerif;
-      color: #666666;
-      font-size: 1.2rem;
-      font-weight: 500;
+    .search-bar {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      background-color: #f3f3f3;
       width: 450px;
       border-radius: 4px;
-      background-color: #f3f3f3;
-      padding: 13px 8px;
       max-height: 34px;
-      border: none;
-      outline: none;
+      border: 1px solid red;
+      left: 28px;
+      top: 1px;
+
+      input {
+        width: 100%;
+        background-color: #f3f3f3;
+        color: #666666;
+        font-family: $sansSerif;
+        font-size: 0.844rem;
+        letter-spacing: 0.0005rem;
+        font-weight: 600;
+        padding: 0 8px;
+        border: none;
+        outline: none;
+        height: 34px;
+      }
+      .search-icon {
+        display: block;
+        width: 38px;
+        height: 38px;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
     .user-links {
       max-width: 300px;
@@ -47,7 +75,6 @@ header {
       justify-content: space-between;
       align-items: center;
       padding-right: 20px;
-
 
       .sign-in,
       .sign-up {
@@ -73,8 +100,15 @@ header {
         height: 24px;
         transition: .3s;
         border-radius: 50%;
-        background-color: grey;
+        background-color: white;
+        margin-left: 10px;
 
+        svg:first-of-type {
+          fill: #555;
+        }
+        svg:nth-child(2) {
+          fill: white;
+        }
         &:hover {
           color: $mainOrange;
         }
@@ -85,12 +119,23 @@ header {
         text-decoration: none;
         color: white;
         background-color: $mainOrange;
-        padding: 8px 10px;
+        padding: 9px 20px;
         transition: .3s;
         border-radius: 20px;
+        font-family: $sansSerif;
+        margin-left: 10px;
+        letter-spacing: 0.001rem;
 
         &:hover {
           background-color: black;
+        }
+        svg {
+          width: 12px;
+          margin-right: 4px;
+
+          path {
+            fill: white;
+          }
         }
       }
     }
